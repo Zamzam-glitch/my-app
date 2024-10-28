@@ -3,35 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import Web3 from 'web3';
 
-const ADDRESS = "0xD5847B17Cd02eF862B3022B2C6aBA6B83Fb62461";
+const ADDRESS = "0x0bFA423a9aed3a08cd332725C9cd41389E72Ebbf";
 const ABI = [
-	{
-		"inputs": [],
-		"name": "decreaseNumber",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "increaseNumber",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "newMessage",
-				"type": "string"
-			}
-		],
-		"name": "setMessage",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
 	{
 		"inputs": [
 			{
@@ -50,6 +23,13 @@ const ABI = [
 	},
 	{
 		"inputs": [],
+		"name": "decreaseNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "getNumber",
 		"outputs": [
 			{
@@ -59,6 +39,13 @@ const ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "increaseNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -73,8 +60,21 @@ const ABI = [
 		],
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "newMessage",
+				"type": "string"
+			}
+		],
+		"name": "setMessage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	}
-];
+]
 
 function App() {
     const [number, setNumber] = useState("none");
