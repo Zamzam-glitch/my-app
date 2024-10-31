@@ -3,8 +3,35 @@ import './App.css';
 import { useState } from 'react';
 import Web3 from 'web3';
 
-const ADDRESS = "0x0bFA423a9aed3a08cd332725C9cd41389E72Ebbf";
+const ADDRESS = "0xcCaB59AeAE86F41643b20200f24a3D48126be416";
 const ABI = [
+	{
+		"inputs": [],
+		"name": "decreaseNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "increaseNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "newMessage",
+				"type": "string"
+			}
+		],
+		"name": "setMessage",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -23,13 +50,6 @@ const ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "decreaseNumber",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "getNumber",
 		"outputs": [
 			{
@@ -43,13 +63,6 @@ const ABI = [
 	},
 	{
 		"inputs": [],
-		"name": "increaseNumber",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "message",
 		"outputs": [
 			{
@@ -59,19 +72,6 @@ const ABI = [
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "newMessage",
-				"type": "string"
-			}
-		],
-		"name": "setMessage",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
